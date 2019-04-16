@@ -3,7 +3,7 @@ const app = express()
 
 const Sequelize = require('sequelize')
 // const sequelize = new Sequelize('postgres://postgres:secret@localhost:5432/postgres', {define: { timestamps: false }})
-const connectionString = process.env.DATABASE_URL || 'postgres://postgres:secret@localhost:5432/postgres'
+const connectionString = process.env.DATABASE_URL || 'postgresql-concentric-69092'
 const sequelize = new Sequelize(connectionString, {define: { timestamps: false }})
 
 // // If we add the first API endpoint:
@@ -99,7 +99,6 @@ app.put('/houses/:id', function (req, res, next) {
     })
     res.send()
   })
- 
 })
 
 // app.get('/houses/:id', function (req, res, next) {
