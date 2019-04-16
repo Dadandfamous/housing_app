@@ -52,10 +52,10 @@ app.get('/houses/:id', function (req, res, next) {
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
-app.post('/houses', function (req, res) {
-  console.log('Incoming data: ', req.body)
-  res.json({ message: 'Create a new house' })
-})
+// app.post('/houses', function (req, res) {
+//   console.log('Incoming data: ', req.body)
+//   res.json({ message: 'Create a new house' })
+// })
 
 //////// create
 app.post('/houses', function (req, res) {
