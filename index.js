@@ -12,7 +12,7 @@ const sequelize = new Sequelize(connectionString, {define: { timestamps: false }
 // })
 
 // And some code to listen to port 4000:
-const port = 4000
+const port = process.env.PORT
 app.listen(port, () => `Listening on port ${port}`)
 
 // This is how you setup the house model in Sequelize (read more in the docs)
@@ -70,12 +70,12 @@ app.post('/houses', function (req, res) {
     })
 })
 
-House.create({
-  title: 'Multi Million Estate',
-  address: 'This was built by a super-duper rich programmer',
-  size: 1235,
-  price: 98400000
-}).then(house => console.log(`The house is now created. The ID = ${house.id}`))
+// House.create({
+//   title: 'Multi Million Estate',
+//   address: 'This was built by a super-duper rich programmer',
+//   size: 1235,
+//   price: 98400000
+// }).then(house => console.log(`The house is now created. The ID = ${house.id}`))
 
 
 //// adjust
