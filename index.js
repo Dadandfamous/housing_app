@@ -12,7 +12,7 @@ const sequelize = new Sequelize(connectionString, {define: { timestamps: false }
 // })
 
 // And some code to listen to port 4000:
-const port = process.env.PORT
+const port = process.env.PORT || 80
 app.listen(port, () => `Listening on port ${port}`)
 
 // This is how you setup the house model in Sequelize (read more in the docs)
